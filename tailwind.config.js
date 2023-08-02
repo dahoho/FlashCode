@@ -1,5 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-const { nextui } = require("@nextui-org/react");
 
 module.exports = {
   content: [
@@ -23,9 +22,7 @@ module.exports = {
       },
     },
   },
-  darkMode: "class",
   plugins: [
-    nextui(),
     require("@tailwindcss/typography"),
     require("@tailwindcss/forms"),
     require("@tailwindcss/line-clamp"),

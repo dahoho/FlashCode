@@ -1,6 +1,5 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Providers } from "./providers";
 import { Header } from "@/components/organisms/Header";
 import { Footer } from "@/components/organisms/Footer";
 
@@ -13,13 +12,11 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="ja">
       <body>
-        <Providers>
-          <div className="grid grid-rows-[auto,1fr,auto] grid-cols-1 min-h-screen">
-            <Header />
-            <main className="bg-lightGray">{children}</main>
-            <Footer />
-          </div>
-        </Providers>
+        <div className="grid grid-rows-[auto,1fr,auto] grid-cols-1 min-h-screen">
+          <Header />
+          <main className="bg-lightGray py-10">{children}</main>
+          <Footer />
+        </div>
       </body>
     </html>
   );
