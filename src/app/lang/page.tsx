@@ -1,5 +1,4 @@
 import { Container } from "@/components/organisms/Container";
-import { Card } from "@tremor/react";
 import Link from "next/link";
 
 const LANGUAGE_ITEMS = [
@@ -22,12 +21,7 @@ const Lang = () => {
       <ul className="mt-6 grid gap-5">
         {LANGUAGE_ITEMS.map((item, index) => (
           <li key={index}>
-            <Link href={`lang/${item.link}/`}>
-              <Card>
-                <h2 className="text-center text-lg font-medium">{item.title}</h2>
-                <p className="mt-3">{item.discription}</p>
-              </Card>
-            </Link>
+            <Link href={`lang/${item.link}/`}></Link>
           </li>
         ))}
       </ul>

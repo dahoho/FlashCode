@@ -1,5 +1,4 @@
 import { Container } from "@/components/organisms/Container";
-import { Card } from "@tremor/react";
 
 const CATEGORY_ITEMS = [
   {
@@ -53,12 +52,7 @@ const JavaScript = () => {
     <Container>
       <ul className="grid gap-5">
         {CATEGORY_ITEMS.map((item, index) => (
-          <li key={index}>
-            <Card>
-              <p>{item.title}</p>
-              <p>{item.discription}</p>
-            </Card>
-          </li>
+          <li key={index}></li>
         ))}
       </ul>
     </Container>

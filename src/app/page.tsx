@@ -1,5 +1,4 @@
 import { Container } from "@/components/organisms/Container";
-import { Button } from "@tremor/react";
 import Link from "next/link";
 
 const Home = () => {
@@ -15,9 +14,7 @@ const Home = () => {
           <br />
           比較的少ない労力で、プログラミング言語の基本的な文法の大部分を効率的に学ぶことができます。
         </p>
-        <Link className="text-center block mt-8" href="lang/">
-          <Button size="xl">始める</Button>
-        </Link>
+        <Link className="text-center block mt-8" href="lang/"></Link>
       </div>
     </Container>
   );
