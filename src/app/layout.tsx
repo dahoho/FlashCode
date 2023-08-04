@@ -1,7 +1,9 @@
 import "@/styles/globals.css";
 import type { Metadata } from "next";
 import { Header } from "@/components/organisms/Header";
+
 import { Footer } from "@/components/organisms/Footer";
+import { Providers } from "./providers";
 
 export const metadata: Metadata = {
   title: "FlashCode",
@@ -14,7 +16,11 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
       <body>
         <div className="grid grid-rows-[auto,1fr,auto] grid-cols-1 min-h-screen">
           <Header />
-          <main className="bg-gray-l py-10">{children}</main>
+
+          <Providers>
+            <main className="bg-gray-l py-10 h-full">{children}</main>
+          </Providers>
+
           <Footer />
         </div>
       </body>
