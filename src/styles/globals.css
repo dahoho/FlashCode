@@ -73,6 +73,10 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground  text-navy;
   }
+}
+
+.card {
+  @apply shadow-md p-4;
 }
