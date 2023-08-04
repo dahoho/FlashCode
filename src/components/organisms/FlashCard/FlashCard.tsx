@@ -4,18 +4,34 @@ import { Code } from "@nextui-org/react";
 import React, { useState } from "react";
 import { tv } from "tailwind-variants";
 
-export const FlashCard: React.FC = () => {
-  const [isAnswer, setIsAnswer] = useState<boolean>(false);
+type FlashCardProps = {
+  answerTitle: string;
+  code: string;
+  sampleCode: string;
+  onNext?: () => void;
+  onPrevious?: () => void;
+  currentCardNumber: number;
+  itemsLength: number;
+  isAnswer: boolean;
+  handleAnswer: () => void;
+};
 
-  const handleAnswer = () => {
-    setIsAnswer(prev => !prev);
-  };
-
+export const FlashCard: React.FC<FlashCardProps> = ({
+  answerTitle,
+  code,
+  sampleCode,
+  onNext,
+  onPrevious,
+  currentCardNumber,
+  itemsLength,
+  isAnswer,
+  handleAnswer,
+}) => {
   const card = tv({
     slots: {
       wrapper: "card text-center h-full flex items-center justify-center",
       buttonWrapper: "flex gap-5 justify-center mt-10",
-      codeBlock: "w-full text-left mt-4 p-4",
+      codeBlock: "w-full text-left mt-4 p-4 whitespace-pre-wrap",
       codeString: "font-bold mt-8 text-4xl",
       answerString: "mt-8 font-bold text-xl",
       content: "content w-full",
@@ -38,28 +54,25 @@ export const FlashCard: React.FC = () => {
   return (
     <div className={wrapper()}>
       <div className={content()}>
+        <p>{`${currentCardNumber + 1}問目`}</p>
         <div className={isAnswerHidden()}>
-          <p className={codeString()}>str.length</p>
+          <p className={codeString()}>{code}</p>
           <Button className="mt-10" onClick={handleAnswer}>
             解説を見る
           </Button>
         </div>
         <div className={isAnswerBlock()}>
           <div className={answerString()}>
-            <p>文字数を取得する</p>
-            <p className={codeString()}>str.length()</p>
+            <p>{answerTitle}</p>
+            <p className={codeString()}>{code}</p>
           </div>
           <section className="mt-12">
             <h2 className="font-medium">サンプルコード</h2>
-            <Code className={codeBlock()}>
-              const str = "こんにちは";
-              <br />
-              str.length // 5
-            </Code>
+            <Code className={codeBlock()}>{sampleCode}</Code>
           </section>
           <div className={buttonWrapper()}>
-            <Button onClick={handleAnswer}>戻る</Button>
-            <Button onClick={handleAnswer}>次へ</Button>
+            {currentCardNumber !== 0 && <Button onClick={onPrevious}>戻る</Button>}
+            {itemsLength - 1 !== currentCardNumber && <Button onClick={onNext}>次へ</Button>}
           </div>
         </div>
       </div>
