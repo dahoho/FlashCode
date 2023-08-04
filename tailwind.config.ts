@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 import { withTV } from "tailwind-variants/transformer";
+const { nextui } = require("@nextui-org/react");
 
 const config = {
   darkMode: ["class"],
@@ -8,6 +9,7 @@ const config = {
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
+    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     container: {
@@ -77,7 +79,7 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [nextui(), require("tailwindcss-animate")],
 } satisfies Config;
 
 export default withTV(config);
