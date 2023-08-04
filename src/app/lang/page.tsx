@@ -9,7 +9,6 @@ const LANGUAGE_ITEMS = [
   },
   {
     title: "Comming soon",
-    discription: "説明文が入ります。",
   },
 ];
 
@@ -24,7 +23,7 @@ const Lang = () => {
             <Link href={`lang/${item.link}/`}>
               <div className="card">
                 <p className="font-medium text-lg">{item.title}</p>
-                <p className="mt-2 text-sm">{item.discription}</p>
+                {item.discription && <p className="text-sm mt-2">{item.discription}</p>}
               </div>
             </Link>
           </li>
