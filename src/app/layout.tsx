@@ -14,7 +14,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
       <body>
         <div className="grid grid-rows-[auto,1fr,auto] grid-cols-1 min-h-screen">
           <Header />
-          <main className="bg-lightGray py-10">{children}</main>
+          <main className="bg-gray-l py-10">{children}</main>
           <Footer />
         </div>
       </body>

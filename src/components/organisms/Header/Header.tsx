@@ -8,13 +8,6 @@ export const Header: React.FC = () => {
         <div>
           <Link href="/">Flash Code</Link>
         </div>
-        {/* <nav>
-          <ul>
-            <li>JavaScript</li>
-            <li>テスト</li>
-            <li>テスト</li>
-          </ul>
-        </nav> */}
       </div>
     </header>
   );

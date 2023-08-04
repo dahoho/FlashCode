@@ -16,7 +16,9 @@ const Home = () => {
           比較的少ない労力で、プログラミング言語の基本的な文法の大部分を効率的に学ぶことができます。
         </p>
         <Link className="text-center block mt-8" href="lang/">
-          <Button variant="outline">始める</Button>
+          <Button variant="secondary" size={"lg"} className="bg-emerald text-white">
+            始める
+          </Button>
         </Link>
       </div>
     </Container>

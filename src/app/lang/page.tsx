@@ -17,11 +17,16 @@ const Lang = () => {
   return (
     <Container>
       <h1 className="text-center font-medium text-xl text-navy">言語一覧</h1>
-      <p className="text-center mt-8">学習したいコースを選んでください。</p>
+      <p className="text-center mt-8">学習したい言語を選んでください。</p>
       <ul className="mt-6 grid gap-5">
         {LANGUAGE_ITEMS.map((item, index) => (
           <li key={index}>
-            <Link href={`lang/${item.link}/`}></Link>
+            <Link href={`lang/${item.link}/`}>
+              <div className="card">
+                <p className="font-medium text-lg">{item.title}</p>
+                <p className="mt-2 text-sm">{item.discription}</p>
+              </div>
+            </Link>
           </li>
         ))}
       </ul>
