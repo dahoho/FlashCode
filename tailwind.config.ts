@@ -21,7 +21,6 @@ const config = {
       colors: {
         // 追加
         "gray-l": "#f9fbfe",
-        emerald: "#30C8D6",
         navy: "#2B546A",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
