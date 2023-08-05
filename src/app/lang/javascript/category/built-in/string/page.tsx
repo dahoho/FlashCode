@@ -9,19 +9,19 @@ import { useState } from "react";
 
 const COURSE_ITEMS = [
   {
-    answerTitle: "文字数を取得する",
+    answerTitle: "文字数の長さを取得する",
     code: "str.length()",
     sampleCode: `const str = "こんにちは"; str.length; // 5`,
   },
   {
-    answerTitle: "文字数を繰り返す",
-    code: "str.repeat()",
-    sampleCode: `const str = "まわる"; str.repeat(2);// まわるまわる`,
-  },
-  {
     answerTitle: "文字列を大文字に変換する",
     code: "str.toUpperCase()",
-    sampleCode: `const str = "apple"; str.toUpperCase();// APPLE`,
+    sampleCode: `const str = "apple"; str.toUpperCase(); // APPLE`,
+  },
+  {
+    answerTitle: "文字列を小文字に変換する",
+    code: "str.toLowerCase()",
+    sampleCode: `const str = "APPLE"; str.toLowerCase(); // apple`,
   },
 ];
 

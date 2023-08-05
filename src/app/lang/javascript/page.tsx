@@ -14,6 +14,8 @@ const COURSE_ITEMS = [
 const CoursePage: React.FC = () => {
   return (
     <Container>
+      <h1 className="text-center font-bold text-xl">JavaScript</h1>
+      <p className="text-center text-sm mt-10">コースを選択してください。</p>
       <Course courseItems={COURSE_ITEMS} />
     </Container>
   );

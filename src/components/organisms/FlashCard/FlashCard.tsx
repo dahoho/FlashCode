@@ -46,7 +46,7 @@ export const FlashCard: React.FC<FlashCardProps> = ({
       isAnswerHidden: `question ${isAnswer ? "hidden" : "block"}`,
       isAnswerBlock: `question ${isAnswer ? "block" : "hidden"}`,
       problemNumber: "text-2xl font-bold",
-      sampleCodeTitle: "font-bold",
+      sampleCodeTitle: "font-bold bg-black text-white p-2 text-xs",
       completionMessage: "font-bold text-xl",
     },
   });
