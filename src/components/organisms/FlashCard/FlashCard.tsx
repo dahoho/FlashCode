@@ -33,8 +33,6 @@ export const FlashCard: React.FC<FlashCardProps> = ({
   isCompletion,
   handleReset,
 }) => {
-  console.log(isCompletion);
-
   const card = tv({
     slots: {
       wrapper: "card text-center h-full flex items-center justify-center",
