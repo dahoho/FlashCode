@@ -18,7 +18,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
           <Header />
 
           <Providers>
-            <main className="bg-gray-l py-10 h-full">{children}</main>
+            <main className="bg-gray-l h-full py-5">{children}</main>
           </Providers>
 
           <Footer />

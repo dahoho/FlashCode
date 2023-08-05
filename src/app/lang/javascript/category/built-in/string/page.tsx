@@ -55,7 +55,7 @@ const String = () => {
         isCompletion={isCompletion}
         handleReset={handleReset}
       />
-      <Progress aria-label="Loading..." size="sm" value={progressValue} />
+      <Progress className="mt-4" size="sm" value={progressValue} />
     </Container>
   );
 };

@@ -46,7 +46,6 @@ const CATEGORY_ITEMS = [
 const BuiltIn = () => {
   return (
     <Container>
-      <h1 className="text-center font-bold text-xl">JavaScript</h1>
       <p className="text-center text-sm mt-10">カテゴリーを選択してください。</p>
       <ul className="grid gap-5 mt-8">
         {CATEGORY_ITEMS.map((item, index) => (
