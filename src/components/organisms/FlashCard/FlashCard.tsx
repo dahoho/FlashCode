@@ -35,7 +35,6 @@ export const FlashCard: React.FC<FlashCardProps> = ({
 }) => {
   const card = tv({
     slots: {
-      wrapper: "",
       buttonWrapper: "flex gap-5 justify-center mt-8",
       cardBody:
         "card content text-center w-full h-[450px] min-h-[450px] overflow-auto flex items-center justify-center",
@@ -51,7 +50,6 @@ export const FlashCard: React.FC<FlashCardProps> = ({
   });
 
   const {
-    wrapper,
     buttonWrapper,
     codeBlock,
     codeString,
@@ -64,7 +62,7 @@ export const FlashCard: React.FC<FlashCardProps> = ({
   } = card();
 
   return (
-    <div className={wrapper()}>
+    <div className="mt-4">
       {isCompletion ? (
         <div className={cardBody()}>
           <div>
