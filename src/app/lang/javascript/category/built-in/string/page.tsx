@@ -28,10 +28,16 @@ const COURSE_ITEMS = [
 const String = () => {
   const [progressValue, setProgressValue] = useState<number>(0);
   const itemsLength = COURSE_ITEMS.length;
-  const { currentCardNumber, handleNextCard, handlePreviousCard, isAnswer, handleAnswer } =
-    useCardNavigation(COURSE_ITEMS, itemsLength, setProgressValue);
-
-  console.log(progressValue);
+  const {
+    currentCardNumber,
+    handleNextCard,
+    handlePreviousCard,
+    isAnswer,
+    handleAnswer,
+    handleNextCardCompletion,
+    isCompletion,
+    handleReset,
+  } = useCardNavigation(COURSE_ITEMS, itemsLength, setProgressValue);
 
   return (
     <Container>
@@ -45,6 +51,9 @@ const String = () => {
         itemsLength={itemsLength}
         isAnswer={isAnswer}
         handleAnswer={handleAnswer}
+        handleNextCardCompletion={handleNextCardCompletion}
+        isCompletion={isCompletion}
+        handleReset={handleReset}
       />
       <Progress className="mt-4" aria-label="Loading..." size="sm" value={progressValue} />
     </Container>

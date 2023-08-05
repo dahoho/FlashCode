@@ -12,7 +12,7 @@ const LANGUAGE_ITEMS = [
   },
 ];
 
-const Lang = () => {
+const LangPage = () => {
   return (
     <Container>
       <h1 className="text-center font-medium text-xl text-navy">言語一覧</h1>
@@ -33,4 +33,4 @@ const Lang = () => {
   );
 };
 
-export default Lang;
+export default LangPage;
