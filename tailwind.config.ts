@@ -22,7 +22,6 @@ const config = {
     extend: {
       colors: {
         // 追加
-        "gray-l": "#f9fbfe",
         navy: "#2B546A",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
