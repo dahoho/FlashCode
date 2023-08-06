@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Code } from "@nextui-org/react";
 import Link from "next/link";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { monokaiSublime } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 
 import { tv } from "tailwind-variants";
 
@@ -38,7 +40,7 @@ export const FlashCard: React.FC<FlashCardProps> = ({
       buttonWrapper: "flex gap-5 justify-center mt-8",
       cardBody:
         "card content text-center w-full h-[420px] min-h-[420px] overflow-auto flex items-center justify-center",
-      codeBlock: "w-full text-left mt-4 p-4 whitespace-pre-wrap bg-sage-3 text-sage-12",
+      codeBlock: "text-left",
       codeString: "font-bold mt-8 text-2xl",
       answerString: "mt-8 font-bold text-xl",
       isAnswerHidden: `question ${isAnswer ? "hidden" : "block"}`,
@@ -98,7 +100,11 @@ export const FlashCard: React.FC<FlashCardProps> = ({
               </div>
               <section className="mt-8">
                 <h2 className={sampleCodeTitle()}>サンプルコード</h2>
-                <Code className={codeBlock()}>{sampleCode}</Code>
+                <div className={codeBlock()}>
+                  <SyntaxHighlighter wrapLongLines language="javascript" style={monokaiSublime}>
+                    {sampleCode}
+                  </SyntaxHighlighter>
+                </div>
               </section>
               <div className={buttonWrapper()}>
                 {currentCardNumber !== 0 && (
