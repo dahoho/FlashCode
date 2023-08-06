@@ -86,7 +86,7 @@ export const FlashCard: React.FC<FlashCardProps> = ({
       ) : (
         <div className={cardBody()}>
           <div>
-            <p className={problemNumber()}>{`${currentCardNumber + 1}問目`}</p>
+            <p className={problemNumber()}>{`${currentCardNumber + 1} / ${itemsLength}`}</p>
             <div className={isAnswerHidden()}>
               <div className={questionString()}>
                 <p>{questionTitle}</p>

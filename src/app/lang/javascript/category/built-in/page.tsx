@@ -1,4 +1,5 @@
 import { Container } from "@/components/organisms/Container";
+import { JAVASCRIPT_STRING_ITEMS } from "@/data";
 import Link from "next/link";
 
 const CATEGORY_ITEMS = [
@@ -11,6 +12,7 @@ const CATEGORY_ITEMS = [
     title: "String",
     discription: "文字列を操作する",
     link: "string",
+    itemsLength: JAVASCRIPT_STRING_ITEMS.length,
   },
   // {
   //   title: "Number",
@@ -52,8 +54,9 @@ const BuiltIn: React.FC = () => {
           <li key={index}>
             <Link href={`/lang/javascript/category/built-in/${item.link}/`}>
               <div className="card">
-                <p className="font-medium">{item.title}</p>
-                <p className="text-xs mt-2">{item.discription}</p>
+                <p className="font-medium text-lg">{item.title}</p>
+                <p className="text-md mt-2">{item.discription}</p>
+                <p className="text-sm mt-2">全{item.itemsLength}問</p>
               </div>
             </Link>
           </li>
