@@ -6,7 +6,7 @@ import { monokaiSublime } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 import { tv } from "tailwind-variants";
 
 type FlashCardProps = {
-  answerTitle: string;
+  questionTitle: string;
   code: string;
   sampleCode: string;
   onNext?: () => void;
@@ -21,7 +21,7 @@ type FlashCardProps = {
 };
 
 export const FlashCard: React.FC<FlashCardProps> = ({
-  answerTitle,
+  questionTitle,
   code,
   sampleCode,
   onNext,
@@ -40,9 +40,9 @@ export const FlashCard: React.FC<FlashCardProps> = ({
       cardBody: `card content text-center w-ful max-h-[400px] min-h-[400px]  overflow-auto flex flex-col ${
         isAnswer ? "" : "justify-center"
       } ${isCompletion ? "justify-center" : ""}`,
-      codeBlock: "text-left",
+      codeBlock: "text-left text-sm leading-6",
       codeString: "font-bold mt-8 text-2xl",
-      answerString: "mt-8 font-bold text-md",
+      questionString: "mt-8 font-bold text-lg",
       isAnswerHidden: `question ${isAnswer ? "hidden" : "block"}`,
       isAnswerBlock: `question ${isAnswer ? "block" : "hidden"}`,
       problemNumber: "text-lg font-bold",
@@ -55,7 +55,7 @@ export const FlashCard: React.FC<FlashCardProps> = ({
     buttonWrapper,
     codeBlock,
     codeString,
-    answerString,
+    questionString,
     cardBody,
     isAnswerHidden,
     isAnswerBlock,
@@ -88,14 +88,16 @@ export const FlashCard: React.FC<FlashCardProps> = ({
           <div>
             <p className={problemNumber()}>{`${currentCardNumber + 1}問目`}</p>
             <div className={isAnswerHidden()}>
-              <p className={codeString()}>{code}</p>
+              <div className={questionString()}>
+                <p>{questionTitle}</p>
+              </div>
               <Button className="mt-10 bg-teal-9" onClick={handleAnswer}>
                 答えを見る
               </Button>
             </div>
             <div className={isAnswerBlock()}>
-              <div className={answerString()}>
-                <p>{answerTitle}</p>
+              <div className={questionString()}>
+                <p>{questionTitle}</p>
                 <p className={codeString()}>{code}</p>
               </div>
               <section className="mt-8">

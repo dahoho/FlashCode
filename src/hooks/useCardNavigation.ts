@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction, useState } from "react";
 
 type CourseItemsProps = {
-  answerTitle: string;
+  questionTitle: string;
   code: string;
   sampleCode: string;
 }[];
