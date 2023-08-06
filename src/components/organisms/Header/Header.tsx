@@ -46,7 +46,7 @@ export const Header: React.FC = () => {
       </div>
 
       <nav
-        className={`ease-in duration-200 w-40 fixed top-0 right-0 bottom-0 h-100 bg-sage-1 z-40  ${
+        className={`ease-in duration-200 w-40 md:w-80 fixed top-0 right-0 bottom-0 h-100 bg-sage-1 z-40  ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >

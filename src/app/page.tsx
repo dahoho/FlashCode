@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 const Home: React.FC = () => {
   return (
     <Container>
-      <div className="mt-6 leading-8 text-sm">
+      <div className="mt-6 leading-8 text-sm md:text-center">
         <p>
           当アプリは、フラッシュカードを活用してプログラミング言語学習を効率化することを目的としています。
           <br />
