@@ -37,7 +37,9 @@ export const FlashCard: React.FC<FlashCardProps> = ({
   const card = tv({
     slots: {
       buttonWrapper: "flex gap-5 justify-center mt-8",
-      cardBody: "card content text-center w-ful max-h-[400px]  overflow-auto",
+      cardBody: `card content text-center w-ful max-h-[400px] min-h-[400px]  overflow-auto flex flex-col ${
+        isAnswer ? "" : "justify-center"
+      }`,
       codeBlock: "text-left",
       codeString: "font-bold mt-8 text-2xl",
       answerString: "mt-8 font-bold text-md",
