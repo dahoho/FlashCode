@@ -23,6 +23,13 @@ const COURSE_ITEMS = [
     code: "str.toLowerCase()",
     sampleCode: `const str = "APPLE"; str.toLowerCase(); // apple`,
   },
+  {
+    answerTitle: "開始・終了位置の間、または文字列の最後までの部分集合を返します。",
+    code: "str.substring()",
+    sampleCode: `const str = "programming"; str.substring(1,3); // ro
+const str = "programming"; str.substring(2);
+// ogramming`,
+  },
 ];
 
 const String: React.FC = () => {

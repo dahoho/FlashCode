@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { Code } from "@nextui-org/react";
 import Link from "next/link";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { monokaiSublime } from "react-syntax-highlighter/dist/cjs/styles/hljs";
@@ -38,11 +37,10 @@ export const FlashCard: React.FC<FlashCardProps> = ({
   const card = tv({
     slots: {
       buttonWrapper: "flex gap-5 justify-center mt-8",
-      cardBody:
-        "card content text-center w-full h-[420px] min-h-[420px] overflow-auto flex items-center justify-center",
+      cardBody: "card content text-center w-ful max-h-[400px]  overflow-auto",
       codeBlock: "text-left",
       codeString: "font-bold mt-8 text-2xl",
-      answerString: "mt-8 font-bold text-xl",
+      answerString: "mt-8 font-bold text-md",
       isAnswerHidden: `question ${isAnswer ? "hidden" : "block"}`,
       isAnswerBlock: `question ${isAnswer ? "block" : "hidden"}`,
       problemNumber: "text-lg font-bold",
@@ -69,7 +67,7 @@ export const FlashCard: React.FC<FlashCardProps> = ({
         <div className={cardBody()}>
           <div>
             <p className="font-bold text-xl">お疲れ様でした 🎉</p>
-            <div className="flex flex-col gap-6 mt-14">
+            <div className="flex flex-col items-center gap-6 mt-10">
               <Button className="w-40 bg-teal-9" onClick={handleReset}>
                 一枚目に戻る
               </Button>
