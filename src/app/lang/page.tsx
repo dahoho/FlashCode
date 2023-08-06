@@ -26,6 +26,7 @@ const LangPage: React.FC = () => {
           </li>
         ))}
       </ul>
+      <p className="text-center mt-8">随時追加予定です！</p>
     </Container>
   );
 };

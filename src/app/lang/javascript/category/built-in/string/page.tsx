@@ -55,7 +55,16 @@ const String: React.FC = () => {
         isCompletion={isCompletion}
         handleReset={handleReset}
       />
-      <Progress className="mt-4 bg-sage-3" size="sm" value={progressValue} />
+      <div className="mt-4">
+        <Progress
+          classNames={{
+            track: "bg-sage-3",
+            indicator: "bg-teal-9",
+          }}
+          size="sm"
+          value={progressValue}
+        />
+      </div>
     </Container>
   );
 };
