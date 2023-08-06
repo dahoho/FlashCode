@@ -21,8 +21,6 @@ const config = {
     },
     extend: {
       colors: {
-        // 追加
-        navy: "#2B546A",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -78,7 +76,7 @@ const config = {
       },
     },
   },
-  plugins: [nextui(), require("tailwindcss-animate")],
+  plugins: [nextui(), require("tailwindcss-animate"), require("windy-radix-palette")],
 } satisfies Config;
 
 export default withTV(config);

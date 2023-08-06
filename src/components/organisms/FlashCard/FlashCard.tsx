@@ -37,14 +37,14 @@ export const FlashCard: React.FC<FlashCardProps> = ({
     slots: {
       buttonWrapper: "flex gap-5 justify-center mt-8",
       cardBody:
-        "card content text-center w-full h-[450px] min-h-[450px] overflow-auto flex items-center justify-center",
-      codeBlock: "w-full text-left mt-4 p-4 whitespace-pre-wrap",
+        "card content text-center w-full h-[420px] min-h-[420px] overflow-auto flex items-center justify-center",
+      codeBlock: "w-full text-left mt-4 p-4 whitespace-pre-wrap bg-sage-3 text-sage-12",
       codeString: "font-bold mt-8 text-2xl",
       answerString: "mt-8 font-bold text-xl",
       isAnswerHidden: `question ${isAnswer ? "hidden" : "block"}`,
       isAnswerBlock: `question ${isAnswer ? "block" : "hidden"}`,
-      problemNumber: "text-xl font-bold",
-      sampleCodeTitle: "font-bold bg-black text-white p-2 text-xs",
+      problemNumber: "text-lg font-bold",
+      sampleCodeTitle: "font-bold bg-sage-3 p-2 text-xs",
       completionMessage: "font-bold text-xl",
     },
   });
@@ -62,21 +62,21 @@ export const FlashCard: React.FC<FlashCardProps> = ({
   } = card();
 
   return (
-    <div className="mt-4">
+    <div className="mt-6">
       {isCompletion ? (
         <div className={cardBody()}>
           <div>
             <p className="font-bold text-xl">お疲れ様でした 🎉</p>
             <div className="flex flex-col gap-6 mt-14">
-              <Button className="w-40" onClick={handleReset}>
+              <Button className="w-40 bg-teal-9" onClick={handleReset}>
                 一枚目に戻る
               </Button>
 
               <Link href="/lang/javascript">
-                <Button className="w-40">コース一覧</Button>
+                <Button className="w-40 bg-teal-9">コース一覧</Button>
               </Link>
               <Link href="/lang/">
-                <Button className="w-40">言語一覧</Button>
+                <Button className="w-40 bg-teal-9">言語一覧</Button>
               </Link>
             </div>
           </div>
@@ -87,7 +87,7 @@ export const FlashCard: React.FC<FlashCardProps> = ({
             <p className={problemNumber()}>{`${currentCardNumber + 1}問目`}</p>
             <div className={isAnswerHidden()}>
               <p className={codeString()}>{code}</p>
-              <Button className="mt-10" onClick={handleAnswer}>
+              <Button className="mt-10 bg-teal-9" onClick={handleAnswer}>
                 答えを見る
               </Button>
             </div>
@@ -101,8 +101,13 @@ export const FlashCard: React.FC<FlashCardProps> = ({
                 <Code className={codeBlock()}>{sampleCode}</Code>
               </section>
               <div className={buttonWrapper()}>
-                {currentCardNumber !== 0 && <Button onClick={onPrevious}>戻る</Button>}
+                {currentCardNumber !== 0 && (
+                  <Button className="bg-teal-9" onClick={onPrevious}>
+                    戻る
+                  </Button>
+                )}
                 <Button
+                  className="bg-teal-9"
                   onClick={
                     itemsLength - 1 !== currentCardNumber ? onNext : handleNextCardCompletion
                   }

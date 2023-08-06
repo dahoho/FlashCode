@@ -43,7 +43,7 @@ const CATEGORY_ITEMS = [
   // },
 ];
 
-const BuiltIn = () => {
+const BuiltIn: React.FC = () => {
   return (
     <Container>
       <p className="text-center text-sm mt-10">カテゴリーを選択してください。</p>
@@ -52,7 +52,7 @@ const BuiltIn = () => {
           <li key={index}>
             <Link href={`/lang/javascript/category/built-in/${item.link}/`}>
               <div className="card">
-                <p className="font-medium text-sm">{item.title}</p>
+                <p className="font-medium">{item.title}</p>
                 <p className="text-xs mt-2">{item.discription}</p>
               </div>
             </Link>

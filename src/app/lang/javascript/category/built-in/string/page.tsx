@@ -25,7 +25,7 @@ const COURSE_ITEMS = [
   },
 ];
 
-const String = () => {
+const String: React.FC = () => {
   const [progressValue, setProgressValue] = useState<number>(0);
   const itemsLength = COURSE_ITEMS.length;
   const {
@@ -55,7 +55,7 @@ const String = () => {
         isCompletion={isCompletion}
         handleReset={handleReset}
       />
-      <Progress className="mt-4" size="sm" value={progressValue} />
+      <Progress className="mt-4 bg-sage-3" size="sm" value={progressValue} />
     </Container>
   );
 };

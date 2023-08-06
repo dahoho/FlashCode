@@ -18,7 +18,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
           <Header />
 
           <Providers>
-            <main className="h-full py-5">{children}</main>
+            <main className="h-full py-8">{children}</main>
           </Providers>
 
           <Footer />

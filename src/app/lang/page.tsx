@@ -9,10 +9,10 @@ const LANGUAGE_ITEMS = [
   },
 ];
 
-const LangPage = () => {
+const LangPage: React.FC = () => {
   return (
     <Container>
-      <h1 className="text-center font-medium text-xl text-navy">言語一覧</h1>
+      <h1 className="text-center font-medium text-xl">言語一覧</h1>
       <p className="text-center mt-10 text-sm">学習したい言語を選んでください。</p>
       <ul className="mt-6 grid gap-5">
         {LANGUAGE_ITEMS.map((item, index) => (

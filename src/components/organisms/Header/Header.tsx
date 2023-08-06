@@ -22,7 +22,7 @@ export const Header: React.FC = () => {
   const { isMenuOpen, handleMenuOpen } = useMenuOpen();
 
   return (
-    <header className="h-14 flex items-center">
+    <header className="h-14 flex items-center border-b border-solid border-sage-6">
       <div className="flex justify-between px-5 w-full">
         <div>
           <Link href="/">Flash Code</Link>
@@ -46,7 +46,7 @@ export const Header: React.FC = () => {
       </div>
 
       <nav
-        className={`ease-in duration-200 w-40 fixed top-0 right-0 bottom-0 h-100 bg-white ${
+        className={`ease-in duration-200 w-40 fixed top-0 right-0 bottom-0 h-100 bg-sage-1 z-40  ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >

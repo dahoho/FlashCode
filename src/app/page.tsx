@@ -2,7 +2,7 @@ import { Container } from "@/components/organisms/Container";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
-const Home = () => {
+const Home: React.FC = () => {
   return (
     <Container>
       <div className="mt-6 leading-8 text-sm">
@@ -16,7 +16,7 @@ const Home = () => {
           比較的少ない労力で、プログラミング言語の基本的な文法の大部分を効率的に学ぶことができます。
         </p>
         <Link className="text-center block mt-8" href="lang/">
-          <Button>始める</Button>
+          <Button className="bg-teal-10">始める</Button>
         </Link>
       </div>
     </Container>
