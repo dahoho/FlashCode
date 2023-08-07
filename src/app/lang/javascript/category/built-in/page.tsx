@@ -53,10 +53,12 @@ const BuiltIn: React.FC = () => {
         {CATEGORY_ITEMS.map((item, index) => (
           <li key={index}>
             <Link href={`/lang/javascript/category/built-in/${item.link}/`}>
-              <div className="card">
-                <p className="font-medium text-lg">{item.title}</p>
-                <p className="text-md mt-2">{item.discription}</p>
-                <p className="text-sm mt-2">全{item.itemsLength}問</p>
+              <div className="card flex justify-between items-end">
+                <div>
+                  <p className="font-medium text-lg">{item.title}</p>
+                  <p className="text-xs mt-2">{item.discription}</p>
+                </div>
+                <p className="text-xs mt-2">全{item.itemsLength}問</p>
               </div>
             </Link>
           </li>
