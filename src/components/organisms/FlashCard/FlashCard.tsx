@@ -45,7 +45,6 @@ export const FlashCard: React.FC<FlashCardProps> = ({
       questionString: "mt-8 font-bold text-lg",
       isAnswerHidden: `question ${isAnswer ? "hidden" : "block"}`,
       isAnswerBlock: `question ${isAnswer ? "block" : "hidden"}`,
-      problemNumber: "text-lg font-bold",
       sampleCodeTitle: "font-bold bg-sage-3 p-2 text-xs",
       completionMessage: "font-bold text-xl",
     },
@@ -59,7 +58,6 @@ export const FlashCard: React.FC<FlashCardProps> = ({
     cardBody,
     isAnswerHidden,
     isAnswerBlock,
-    problemNumber,
     sampleCodeTitle,
   } = card();
 
@@ -86,7 +84,6 @@ export const FlashCard: React.FC<FlashCardProps> = ({
       ) : (
         <div className={cardBody()}>
           <div>
-            <p className={problemNumber()}>{`${currentCardNumber + 1} / ${itemsLength}`}</p>
             <div className={isAnswerHidden()}>
               <div className={questionString()}>
                 <p>{questionTitle}</p>

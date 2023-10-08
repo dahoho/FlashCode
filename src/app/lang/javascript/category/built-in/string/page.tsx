@@ -38,7 +38,10 @@ const String: React.FC = () => {
         isCompletion={isCompletion}
         handleReset={handleReset}
       />
-      <div className="mt-4">
+      <div className="mt-4 flex items-center gap-2">
+        <p className="flex-shrink-0 font-bold text-sm">{`${
+          currentCardNumber + 1
+        } / ${itemsLength}問`}</p>
         <Progress
           classNames={{
             track: "bg-sage-3",
