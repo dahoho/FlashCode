@@ -70,4 +70,12 @@ str.indexOf('ござ', -1); // 4
 str.indexOf('ござ, 12'); // -1
 `,
   },
+  {
+    questionTitle: "文字列に特定の文字列が含まれているかを判定する（部分一致）",
+    code: "str.includes()",
+    sampleCode: `const str = "おはようございます";
+str.includes('おは'); // true
+str.includes('よう',2); // true
+`,
+  },
 ];
